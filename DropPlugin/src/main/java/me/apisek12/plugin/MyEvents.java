@@ -30,16 +30,6 @@ public class MyEvents implements Listener {
     private HashMap<String, DropChance> dropChances = PluginMain.dropChances;
     static String[] set; //Ore names
 
-    private void giveExp(Player player){
-        float experienceToGive = PluginMain.experienceToDrop/((float)Math.sqrt((double)player.getLevel()+1));
-        if (player.getExp() == 1.0 || player.getExp()+experienceToGive >= 1.0){
-            player.setLevel(player.getLevel() + (int)(player.getExp()+experienceToGive));
-            player.setExp((player.getExp() + experienceToGive)-((int)(player.getExp()+experienceToGive)));
-        }
-        else {
-            player.setExp(player.getExp()+ experienceToGive);
-        }
-
 
     }
     ItemStack getItemInHand(Player player){
